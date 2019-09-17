@@ -11,7 +11,7 @@ angular.module('LunchCheck', [])
 
     $scope.check = function () {
       var itemList = ($scope.items).split(',') || [];
-      itemList = itemList.filter(function(n){ return n });
+      itemList = itemList.filter(x => x);
 
       if (itemList.length === 0) {
         $scope.message = "Please enter data first!";
