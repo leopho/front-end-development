@@ -1,0 +1,44 @@
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-6 col-xs-12">
+            <h1 class="text-center">Newsletter Sign Up</h1>
+            <div>
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input class="form-control" type="text"
+                           ng-model="signupCtrl.firstname" autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input class="form-control" type="text"
+                           ng-model="signupCtrl.lastname" autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input class="form-control" type="text" placeholder="name@domain.com"
+                           ng-model="signupCtrl.email" autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input class="form-control" type="tel" placeholder="111-222-3333"
+                           ng-model="signupCtrl.phone" autofocus>
+                </div>
+                <div class="form-group">
+                    <label>Favorite Menu Item Number</label>
+                    <input class="form-control" type="text" maxlength="2" minlength="2"
+                           ng-change="signupCtrl.validateMenuItem()" placeholder="SP"
+                           ng-model="signupCtrl.favorite" autofocus>
+                    <div class="help-block" ng-if="signupCtrl.favoriteError">No such menu number exists!</div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" ng-click="signupCtrl.save()" ng-disabled="!signupCtrl.valid()">
+                        Save
+                    </button>
+                </div>
+                <div ng-if="signupCtrl.displayMessage">
+                    Thank you! Your information has been saved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div id="main-content" class="container">
+    <div class="row" ng-if="!infoCtrl.userInfo.valid">
+        <div class="col-md-12 col-sm-6 col-xs-12 text-center">
+            Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+        </div>
+    </div>
+    <div class="row" ng-if="infoCtrl.userInfo.valid">
+        <div class="col-md-12 col-sm-6 col-xs-12">
+            <h1 class="text-center">Your Information</h1>
+            <div>
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input class="form-control" type="text" ng-model="infoCtrl.userInfo.firstname">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input class="form-control" type="text" ng-model="infoCtrl.userInfo.lastname">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input class="form-control" type="text" ng-model="infoCtrl.userInfo.email">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input class="form-control" type="tel" ng-model="infoCtrl.userInfo.phone">
+                </div>
+                <div class="form-group">
+                    <label>Favorite Menu Item</label>
+                    <input class="form-control" type="text" ng-model="infoCtrl.userInfo.favorite">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
